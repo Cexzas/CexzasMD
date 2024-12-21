@@ -32,17 +32,6 @@ module.exports = cexzas = async (cexzas, m, chatUpdate, store) => {
     const from = mek.key.remoteJid 
     
     const downloadMp3 = async (url) => {
-      try {
-        let look = await yts(text) 
-        let convert = look.videos[0] 
-        const pl = await youtube(convert.url) 
-        await cexzas.sendMessage(m.chat, { audio: { url: pl.mp3 }, fileName: convert.title + '.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
-      } catch (err) {
-        m.reply(`*Eror, url tidak valid, pastikan url dari fitur ${prefix}ytsearch*`)
-      }
-    } 
-    
-    const downloadMp3 = async (url) => {
       let look = await yts(text) 
       let convert = look.videos[0] 
       const pl = await youtube(convert.url) 
